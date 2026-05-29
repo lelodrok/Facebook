@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #1c2130;
+      display: flex;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a2030 0%, #141c2a 50%, #1a2030 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      margin-top: 80px;
+      margin-bottom: 60px;
+    }
+    .fb-circle {
+      width: 72px;
+      height: 72px;
+      background: #1877f2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fb-circle svg {
+      width: 40px;
+      height: 40px;
+      fill: white;
+    }
+
+    /* Fields */
+    .fields {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .field {
+      width: 100%;
+      background: #1e2b3a;
+      border: 1.5px solid #2e3d50;
+      border-radius: 14px;
+      padding: 18px 16px;
+      color: #e4e6eb;
+      font-size: 16px;
+      font-family: inherit;
+      outline: none;
+    }
+    .field::placeholder { color: #5a6478; }
+    .field:focus { border-color: #3a5a8a; }
+
+    /* Login button */
+    .btn-login {
+      margin-top: 12px;
+      width: 100%;
+      padding: 17px;
+      background: #1877f2;
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-size: 17px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .btn-login:active { opacity: 0.9; }
+
+    /* Forgotten password */
+    .forgot {
+      margin-top: 22px;
+      color: #e4e6eb;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* Spacer */
+    .spacer { flex: 1; }
+
+    /* Bottom */
+    .bottom {
+      width: 100%;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .btn-create {
+      width: 100%;
+      padding: 16px;
+      background: transparent;
+      border: 1.5px solid #2a4a7a;
+      border-radius: 30px;
+      color: #4a90e2;
+      font-size: 16px;
+      font-weight: 700;
+      font-family: inherit;
+      cursor: pointer;
+    }
+    .btn-create:active { opacity: 0.8; }
+
+    /* Meta logo */
+    .meta {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      color: #c8ccd4;
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.2px;
+    }
+    .meta-icon {
+      width: 22px;
+      height: 12px;
+      fill: #c8ccd4;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div class="logo-wrap">
+      <div class="fb-circle">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </div>
+    </div>
+
+    <div class="fields">
+      <input class="field" type="text" placeholder="Número de teléfono o correo electrónico" />
+      <input class="field" type="password" placeholder="Contraseña" />
+    </div>
+
+    <button class="btn-login">Iniciar sesión</button>
+    <span class="forgot">¿Olvidaste tu contraseña?</span>
+
+    <div class="spacer"></div>
+
+    <div class="bottom">
+      <button class="btn-create">Crear cuenta nueva</button>
+      <div class="meta">
+        <!-- Meta infinity logo (official path) -->
+        <svg class="meta-icon" viewBox="0 0 38 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7.2 2.4C4.3 2.4 2.1 4.3.8 6.8c-.8-1.4-1.3-3-.8-4.4C1.1.5 3.3-.1 5.4.4c1.5.4 2.9 1.4 4 2.4-.1 0-.1-.1-.2-.1-.1-.1-.2 0 0 0 0-.1 0 0 0 0h-.1c.1.1.1.1 0 0-.1 0 0 0 0 0zM.4 9C.1 10 0 11.1 0 12.2c0 4.3 2.6 7.4 6.6 7.4 2.4 0 4.6-1.6 6.6-4.3-1.9-3-3.2-6.3-3.2-9.3 0-.7.1-1.4.3-2C7.7 2.8 4.9 3 2.9 4.7 1.7 5.8.8 7.3.4 9zm12.9 6.5c2.1 2.7 4.2 4.3 6.7 4.3 4 0 6.6-3.1 6.6-7.4 0-1.1-.2-2.2-.5-3.2-.4-1.7-1.3-3.2-2.5-4.3-2-1.7-4.8-1.9-7.4-.2.2.6.3 1.3.3 2 0 3-1.3 6.3-3.2 8.8zm3.4-8.9c-1.6 3-2.5 6-2.5 8.4 0 .7.1 1.3.2 1.8 2.4-2.3 4.1-5.4 4.7-8 .1-.5.2-1 .2-1.5-.7-.4-1.7-.7-2.6-.7zm4.8.7c-.6 2.6-2.3 5.7-4.7 8 .5 1.7 1.4 2.7 2.7 2.7 2.2 0 3.8-2.2 3.8-5.2 0-2.3-.7-4.3-1.8-5.5zM7.2 3.8c-.9 0-1.9.3-2.6.7 0 .5.1 1 .2 1.5.6 2.6 2.3 5.7 4.7 8 .1-.5.2-1.1.2-1.8 0-2.4-.9-5.4-2.5-8.4z"/>
+        </svg>
+        Meta
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
